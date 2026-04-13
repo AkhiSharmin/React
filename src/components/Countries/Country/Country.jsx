@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./Country.css";
 
-const Country = ({ country }) => {
-  // console.log(country.population.population);
+const Country = ({ country, handelVisitedCountries }) => {
+  console.log(handelVisitedCountries);
   const [visited, setVisited] = useState(false);
 
   const handelVisited = () => {
@@ -18,6 +18,7 @@ const Country = ({ country }) => {
 
     // option three
     setVisited(!visited);
+    handelVisitedCountries(country);
   };
 
   return (
